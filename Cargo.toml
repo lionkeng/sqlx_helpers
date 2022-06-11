@@ -1,0 +1,17 @@
+[package]
+name = "sqlx_helpers"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+async-graphql = { version = "4" }
+async-trait = "0.1.53"
+deadpool = { version = "0.8.2" }
+sqlx = { git = "https://github.com/launchbadge/sqlx.git", rev = "a2691b9", features = [
+  "runtime-tokio-native-tls",
+  "postgres",
+  "tls",
+  "macros",
+] }
